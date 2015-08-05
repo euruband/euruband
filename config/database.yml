@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['USER'] %>
+  pool: 5
+
+development:
+  <<: *default
+  database: euruband_development
+
+test:
+  <<: *default
+  database: euruband_test
+
+production:
+  <<: *default
+  database: euruband_production
