@@ -15,3 +15,13 @@ making music together - even remotely. Real remote sessions are not
 possible now. The current state of euruband allows you
 to run it locally: Say, there are two persons in a LAN entering
 a stage by visiting it in the browser.
+
+## How to start
+
+Run the following commands in seperate terminals: 
+
+    $ rails s
+    
+    $ ./bin/cable
+    
+    $ redis-server
