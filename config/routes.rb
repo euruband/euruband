@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   resources :stages do
     resources :messages
     put :reset, on: :member
+    get :reload, on: :member
+    get :stop, on: :member
   end
 end
