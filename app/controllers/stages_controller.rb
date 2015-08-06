@@ -1,3 +1,5 @@
+require 'sonic_pi'
+
 class StagesController < ApplicationController
 
   before_action :find_resource, only: [:show, :reset, :reload, :stop]
