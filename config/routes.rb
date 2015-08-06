@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resources :stages do
     resources :messages
+    put :reset, on: :member
   end
 end
