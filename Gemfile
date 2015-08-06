@@ -8,12 +8,16 @@ gem 'pg'
 gem 'puma'
 gem 'redis'
 
+# TODO: Remove me and write plain JS
 gem 'coffee-rails'
+
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'haml'
 gem 'jbuilder', '~> 2.0'
+
+gem 'sonic-pi-cli'
 
 group :development, :test do
   gem 'spring'
