@@ -1,0 +1,8 @@
+%h1 Choose a stage!
+
+%p
+  %ul
+    - @stages.each do |stage|
+      %li
+        = link_to stage.title, stage
+
