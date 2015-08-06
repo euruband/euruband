@@ -25,3 +25,8 @@ Run the following commands in seperate terminals:
     $ ./bin/cable
     
     $ redis-server
+
+## Further notes
+
+The basic architecture using `ActionCable` was adopted
+from the [actioncable example app](https://github.com/rails/actioncable-examples).
