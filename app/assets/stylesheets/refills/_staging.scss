@@ -1,17 +1,17 @@
-.hero {  
+.staging {  
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $large-screen: em(860) !default;
   //////////////////////////////////////////////////////////////////////////////////
 
-  $hero-background-top: #7F99BE; 
-  $hero-background-bottom: #20392B;
-  $hero-color: $dark-gray;
+  $staging-background-top: #7F99BE; 
+  $staging-background-bottom: #20392B;
+  $staging-color: $dark-gray;
   $gradient-angle: 10deg;
-  $hero-image: '/assets/lets_get_loud_red_3.jpg'; 
+  $staging-image: '/assets/staging.jpg'; 
 
-  @include background(url($hero-image), no-repeat $hero-background-top scroll);
+  @include background(url($staging-image), no-repeat $staging-background-top scroll);
   background-color: #324766;
   background-position: top;
   background-repeat: no-repeat;
@@ -19,20 +19,20 @@
   padding-bottom: 3em;
   height: 67em;
 
-  .hero-logo img {
+  .staging-logo img {
     height: 4em;
     margin-bottom: 1em;
   }
 
-  .hero-inner {
+  .staging-inner {
     @include outer-container;
     @include clearfix;
-    color: $hero-color;
+    color: $staging-color;
     margin: auto;
     padding: 3.5em;
     text-align: center;
 
-    .hero-copy {
+    .staging-copy {
       text-align: center;
       
       h1 {
