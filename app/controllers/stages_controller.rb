@@ -43,7 +43,7 @@ class StagesController < ApplicationController
   def pi
     @pi ||= begin
               proxy = SonicPi.new
-              proxy.test_connection!
+              #proxy.test_connection!
               proxy
             end
   end

@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
 
   def create
     content = params.fetch(:message, {})[:content].to_s
-
     @message = Message.create! content: content, stage: current_stage, user: current_user
 
     pi.run(current_stage.performance)

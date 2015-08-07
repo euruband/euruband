@@ -1,6 +1,10 @@
-%h1 Choose an Instrument!
-
-%ul
-  - @users.each do |user|
-    %li
-      = link_to user.name, session_url(user_id: user.id), method: :post
+.hero
+  .hero-inner
+    .hero-copy
+      %h1 euruband
+      %p
+        Hi! Welcome to euruband. Who are you?
+    %ul
+      - @users.each do |user|
+        %li
+          = link_to user.name, session_url(user_id: user.id), method: :post

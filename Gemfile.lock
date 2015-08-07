@@ -79,6 +79,13 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    bitters (1.0.0)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
+    bourbon (4.2.3)
+      sass (~> 3.4)
+      thor
     builder (3.2.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -125,6 +132,9 @@ GEM
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
+    neat (1.7.2)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     osc-ruby (1.1.1)
@@ -143,6 +153,7 @@ GEM
       loofah (~> 2.0)
     rake (10.4.2)
     redis (3.2.1)
+    refills (0.1.0)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -194,14 +205,18 @@ PLATFORMS
 DEPENDENCIES
   actioncable!
   arel!
+  bitters
+  bourbon
   coffee-rails
   factory_girl_rails
   haml
   jquery-rails
+  neat
   pg
   puma
   rails!
   redis
+  refills
   rspec-rails (~> 3.0)
   sass-rails (~> 5.0)
   shoulda-matchers

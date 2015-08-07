@@ -14,6 +14,10 @@ gem 'coffee-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'haml'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+gem 'refills'
 
 gem 'sonic-pi-cli'
 
