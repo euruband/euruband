@@ -1,6 +1,3 @@
-%p
-  Add some music, e.g. "play :c4"!
-
 = form_for [ stage, Message.new ], remote: true do |form|
-  = form.text_area :content, size: '100x20'
+  = form.text_area :content, size: '100x10'
   = form.submit 'Add code to running performance'

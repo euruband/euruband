@@ -5,14 +5,8 @@
         = resource.title
       %p
         = resource.description
-
-      %hr
         = link_to 'Reload', reload_stage_path(resource)
         = link_to 'Stop Pi', stop_stage_path(resource)
         = link_to 'Reset', reset_stage_path(resource), method: :put
-      %hr
-
-      %h2 Performance:
       = render 'stages/performance', stage: resource
-      %h2 Messages:
       = render 'messages/messages', stage: resource
