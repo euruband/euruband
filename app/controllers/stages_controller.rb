@@ -27,7 +27,7 @@ class StagesController < ApplicationController
     pi.stop
     resource.messages.destroy_all
     resource.update_column(:performance, '')
-    render :show
+    redirect_to resource
   end
 
   private
