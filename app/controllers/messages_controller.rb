@@ -4,9 +4,7 @@ class MessagesController < ApplicationController
   before_action :set_stage
 
   def create
-    content = params.fetch(:message, {})[:content].to_s
-    @message = Message.create! content: content, stage: current_stage, user: current_user
-
+    @message = Message.create! permitted_params
     pi.run(current_stage.performance)
   end
 
@@ -30,6 +28,10 @@ class MessagesController < ApplicationController
               proxy.test_connection!
               proxy
             end
+  end
+
+  def permitted_params
+    params.require(:message).permit(:content).merge({ stage: current_stage, user: current_user })
   end
 
 end
