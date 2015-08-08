@@ -1,12 +1,17 @@
 .staging
   .staging-inner
     .staging-copy
-      %h1 Choose a stage!
+      %h1 You're almost ready!
 
       %p
-        %ul
-          - @stages.each do |stage|
-            %li
-              = link_to stage.title, stage
+        Choose a stage to enter.
+      %ul
+        - @stages.each do |stage|
+          %li
+            = link_to stage do
+              %button
+                = stage.title
 
-      = link_to 'Wait. Take me back to the root page.', root_url
+      = link_to root_url do
+        %button
+          Wait. Take me back to the root page.
