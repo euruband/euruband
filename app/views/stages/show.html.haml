@@ -8,5 +8,5 @@
         = link_to 'Reload', reload_stage_path(resource)
         = link_to 'Stop Pi', stop_stage_path(resource)
         = link_to 'Reset', reset_stage_path(resource), method: :put
-      = render 'stages/performance', stage: resource
       = render 'messages/messages', stage: resource
+      = render 'stages/performance', stage: resource

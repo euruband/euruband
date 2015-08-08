@@ -8,7 +8,7 @@ class Message < ActiveRecord::Base
   private
 
   def update_performance
-    performance = stage.performance.to_s + self.content.to_s + ";"
+    performance = stage.performance.to_s + "\n" + self.content.to_s + " \n"
     self.stage.update_column(:performance, performance)
   end
 
