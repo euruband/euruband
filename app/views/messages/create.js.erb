@@ -1,2 +1,2 @@
-$('#messages').append('<%=j render @message %>');
+$('#performance').replaceWith('<%=j render 'stages/performance', stage: @stage %>');
 $('#new_message').replaceWith('<%=j render 'messages/new', stage: @stage %>');

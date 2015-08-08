@@ -10,8 +10,6 @@
 %hr
 
 %h2 Performance:
-%p
-  = resource.performance
-
+= render 'stages/performance', stage: resource
 %h2 Messages:
 = render 'messages/messages', stage: resource
