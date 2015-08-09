@@ -1,9 +1,0 @@
-%pre#performance
-  %code
-    = stage.performance.html_safe
-:javascript
-  $(document).ready(function() {
-    $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
-    });
-  });

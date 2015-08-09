@@ -1,1 +1,10 @@
 %article{data:{user:{id:"#{message.user.id}"}}}
+  %pre
+    %code
+      = message.content
+:javascript
+  $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
