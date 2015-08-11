@@ -6,6 +6,7 @@ FactoryGirl.define do
 
   factory :stage do
     title { "Stage#{rand(1000)}" }
+    user
   end
 
   factory :message do
