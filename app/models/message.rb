@@ -1,16 +1,29 @@
 class Message < ActiveRecord::Base
+
+  # validations
+  #
+  #
+
+  validates :user, presence: true
+
+  # associations
+  #
+  #
+
   belongs_to :stage
   belongs_to :user
 
-  after_save   :update_performance
+  # callbacks
+  #
+  #
+
   after_commit :broadcast
 
-  private
+  # instance methods
+  #
+  #
 
-  def update_performance
-    performance = stage.performance.to_s + "\n" + self.content.to_s + " \n"
-    self.stage.update_column(:performance, performance)
-  end
+  private
 
   def broadcast
     ActionCable.server.broadcast(
@@ -18,4 +31,5 @@ class Message < ActiveRecord::Base
       message: MessagesController.render(partial: 'messages/message', locals: { message: self })
     )
   end
+
 end

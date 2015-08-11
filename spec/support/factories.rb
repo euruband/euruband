@@ -10,6 +10,7 @@ FactoryGirl.define do
   end
 
   factory :message do
+    user
   end
 
 end

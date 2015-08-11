@@ -5,6 +5,20 @@ class Stage < ActiveRecord::Base
   #
 
   validates :user, presence: true
+
+  # associations
+  #
+  #
+
   belongs_to :user
   has_many :messages
+
+  # instance methods
+  #
+  #
+
+  def performance
+    messages.pluck(:content).join("\n\n")
+  end
+
 end
