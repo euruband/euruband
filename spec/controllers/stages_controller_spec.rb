@@ -22,7 +22,7 @@ RSpec.describe StagesController, type: :controller do
 
     describe 'PUT reset' do
 
-      let!(:stage)   { FactoryGirl.create(:stage, user: user, performance: 'play(:c5);') }
+      let!(:stage)   { FactoryGirl.create(:stage, user: user) }
       let!(:message) { FactoryGirl.create(:message, stage: stage, user: stage.user) }
 
       it 'deletes all messages' do
@@ -30,7 +30,7 @@ RSpec.describe StagesController, type: :controller do
           expect{
             put :reset, params: { id: stage.id }
           }.to change{ stage.messages.count(true) }.to(0)
-        }.to change { stage.reload.performance }.to('')
+        }.to change { stage.performance }.to('')
       end
     end
   end

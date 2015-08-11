@@ -10,6 +10,7 @@ FactoryGirl.define do
   end
 
   factory :message do
+    content 'Pi is equal 3'
     user
   end
 

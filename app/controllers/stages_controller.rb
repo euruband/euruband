@@ -26,7 +26,6 @@ class StagesController < ApplicationController
   def reset
     pi.stop
     resource.messages.destroy_all
-    resource.update_column(:performance, '')
     redirect_to resource
   end
 
