@@ -1,8 +1,15 @@
 .stage
-  .stage-inner
-    .stage-copy
-      #actions
-        = link_to 'Reload', reload_stage_path(resource)
-        = link_to 'Stop Pi', stop_stage_path(resource)
-        = link_to 'Reset', reset_stage_path(resource), method: :put
-      = render 'messages/messages', stage: resource
+  #headline
+    %h4 euruband
+    %h1= resource.title
+  #actions
+    = link_to reload_stage_path(resource) do
+      %button
+        Reload
+    = link_to stop_stage_path(resource) do
+      %button
+        Stop SonicPi
+    = link_to reset_stage_path(resource), method: :put do
+      %button
+        Reset Stage
+  = render 'messages/messages', stage: resource

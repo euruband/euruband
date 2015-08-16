@@ -14,6 +14,8 @@
 @import "tables";
 @import "typography";
 
+$global-border-radius: 4px;
+
 body {
   padding: 0;
   margin: 0;
@@ -25,8 +27,8 @@ button{
 
 p {
   background-color: white;
-  border: 4px dotted $dark-gray;
-  border-radius: 10px;
+  border: 4px solid $dark-gray;
+  border-radius: $global-border-radius;
   padding: 10px;
   color: green;
 }
