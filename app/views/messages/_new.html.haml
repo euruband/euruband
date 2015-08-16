@@ -1,3 +1,20 @@
-= form_for [ stage, Message.new ], remote: true do |form|
-  = form.text_area :content, size: '100x10'
-  = form.submit 'Add code to running performance'
+= form_for [ stage, Message.new ], remote: true, html: { onsubmit: 'set_content();' } do |form|
+  #editor
+  = form.text_area :content, value: '# Put your code here!'
+  = form.submit 'Add code to running performance', id: 'submitter'
+
+:javascript
+  var textarea  = $('textarea[name="message[content]"]');
+  var editor    = ace.edit("editor");
+
+  var set_content = function() {
+    textarea.val(editor.getSession().getValue());
+  };
+
+  $(document).ready(function(){
+    textarea.hide();
+
+    editor.getSession().setValue(textarea.val());
+    editor.setTheme("ace/theme/solarized_dark");
+    editor.getSession().setMode("ace/mode/ruby");
+  });

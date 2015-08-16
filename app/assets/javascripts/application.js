@@ -14,4 +14,8 @@
 //= require jquery_ujs
 //= require channels
 //= require highlight
+//= require ace/ace/
+//= require ace/worker-html
+//= require ace/theme-solarized_dark
+//= require ace/mode-ruby
 //= require_tree .

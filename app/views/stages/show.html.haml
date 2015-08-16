@@ -1,10 +1,7 @@
 .stage
   .stage-inner
     .stage-copy
-      %h1
-        = resource.title
-      %p
-        = resource.description
+      #actions
         = link_to 'Reload', reload_stage_path(resource)
         = link_to 'Stop Pi', stop_stage_path(resource)
         = link_to 'Reset', reset_stage_path(resource), method: :put

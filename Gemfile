@@ -18,6 +18,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
+gem 'ace-rails-ap'
 
 gem 'sonic-pi-cli'
 
