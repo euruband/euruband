@@ -3,7 +3,7 @@
     %h4= message.user.name.to_s
   %pre
     %code
-      = message.content
+      = message.content.to_s.gsub(/\n/, '')
 :javascript
   $(document).ready(function() {
     $('pre code').each(function(i, block) {
