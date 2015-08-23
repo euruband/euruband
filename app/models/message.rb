@@ -17,6 +17,7 @@ class Message < ActiveRecord::Base
   #
   #
 
+  before_save :sanitize_content
   after_commit :broadcast
 
   # instance methods
@@ -30,6 +31,10 @@ class Message < ActiveRecord::Base
       "stages:#{self.stage_id}:messages",
       message: MessagesController.render(partial: 'messages/message', locals: { message: self })
     )
+  end
+
+  def sanitize_content
+    self.content = self.content.to_s.gsub(/\n/, '')
   end
 
 end
