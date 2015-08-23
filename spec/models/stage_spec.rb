@@ -12,7 +12,7 @@ RSpec.describe Stage do
       let(:content)   { rand(1000).to_s }
       let!(:messages) { FactoryGirl.create_list(:message, 2, stage: subject, content: content) }
 
-      it { expect(subject.performance).to eql("#{content}\n\n#{content}") }
+      it { expect(subject.performance).to eql("#{content}\n#{content}") }
     end
   end
 
