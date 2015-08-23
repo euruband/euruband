@@ -1,4 +1,6 @@
-%article{data:{user:{id:"#{message.user.id}"}}}
+%article{data:{user:{id:"#{message.user.id}"}}, class: 'message'}
+  #user
+    %h4= message.user.name.to_s
   %pre
     %code
       = message.content
