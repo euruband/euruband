@@ -1,6 +1,8 @@
 %article{data:{user:{id:"#{message.user.id}"}}, class: 'message'}
   #user
-    %h4= message.user.name.to_s
+    %i{ class: 'material-icons' }
+      account_circle
+    %strong= message.user.name.to_s
   %pre
     %code
       = message.content.to_s.gsub(/\n/, '')
