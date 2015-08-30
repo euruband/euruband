@@ -129,6 +129,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    material_icons (1.0.0)
     method_source (0.8.2)
     mime-types (2.6.1)
     mini_portile (0.6.2)
@@ -209,10 +210,10 @@ DEPENDENCIES
   arel!
   bitters
   bourbon
-  coffee-rails
   factory_girl_rails
   haml
   jquery-rails
+  material_icons
   neat
   pg
   puma

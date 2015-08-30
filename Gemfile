@@ -8,9 +8,6 @@ gem 'pg'
 gem 'puma'
 gem 'redis'
 
-# TODO: Remove me and write plain JS
-gem 'coffee-rails'
-
 gem 'sass-rails', '~> 5.0'
 gem 'jquery-rails'
 gem 'haml'
@@ -19,6 +16,7 @@ gem 'neat'
 gem 'bitters'
 gem 'refills'
 gem 'ace-rails-ap'
+gem 'material_icons'
 
 gem 'sonic-pi-cli'
 
