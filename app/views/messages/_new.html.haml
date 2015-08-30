@@ -1,6 +1,6 @@
 = form_for [ stage, Message.new ], remote: true, html: { onsubmit: 'set_content();' } do |form|
   #editor
-  = form.text_area :content, value: '# Put your code here!'
+  = form.text_area :content
   = form.submit 'Add code to running performance', id: 'submitter'
 
 :javascript
