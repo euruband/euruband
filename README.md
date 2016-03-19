@@ -2,25 +2,23 @@
 
 ## Making music collaboratively using Sonic Pi
 
-euruband works similar to a chat platform. We call 
-each "chat room" a *stage* - since it is! On each stage, 
-each user can add code contributions (which is simple text input)  
-to the common conversation, the so-called  *performance*.
+euruband makes it possible to code music together collaboratively
+using sonic-pi together via LAN. One person needs to run the
+rails application *and* the classical sonic-pi IDE as "host" - the others
+can contribute then via euruband web application as clients.
 
-The performance of a stage is sent to the Sonic Pi of the
-applcation hosting machine if a server 
-is running locally.   
+After the host has started the web app, clients can connect
+via LAN, visit the web app in the browser an can add code snippets
+to the running performance. Each client only can modify the code
+that she added, but you can access and use the code of the others.
 
-Currently this is only a scratch, but I like the idea of 
-making music together - even remotely. Real remote sessions are not 
-possible now. The current state of euruband allows you
-to run it locally: Say, there are two persons in a LAN entering
-a stage by visiting it in the browser. Both can contribute
-to the sound performance running at the hosts machine.
+For example you can use a `cue` somebody started, so that your shared 
+loops are "in sync".
 
-## How to start (the host)
+## Ok, I am the host. How to start euruband as the host?
 
-Run the following commands in seperate terminals: 
+Clone this repo and run the following commands concurrently in
+seperate terminals:
 
     $ rails s
     
