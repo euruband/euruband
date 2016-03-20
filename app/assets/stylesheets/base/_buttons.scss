@@ -5,7 +5,7 @@ button {
   background-color: $action-color;
   border-radius: $base-border-radius;
   border: none;
-  color: $button-font-color;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -21,7 +21,7 @@ button {
   &:hover,
   &:focus {
     background-color: darken($action-color, 15%);
-    color: $button-font-color;
+    color: #fff;
   }
 
   &:disabled {
