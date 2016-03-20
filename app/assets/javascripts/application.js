@@ -18,4 +18,5 @@
 //= require ace/worker-html
 //= require ace/theme-solarized_dark
 //= require ace/mode-ruby
+//= require refills/accordion_tabs_minimal
 //= require_tree .
