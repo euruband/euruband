@@ -1,14 +1,7 @@
 %article{data:{user:{id:"#{message.user.id}"}}, class: 'message'}
   #user
-    %i{ class: 'material-icons' }
-      account_circle
-    %strong= message.user.name.to_s
-  %pre
-    %code
-      = message.content.to_s.gsub(/\n/, '')
-:javascript
-  $(document).ready(function() {
-    $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
-    });
-  });
+    .avatar
+      = image_tag 'loudly_icon.png'
+      #name= message.user.name.to_s
+    %p
+      updated her/his contrib. Rock on!

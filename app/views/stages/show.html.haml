@@ -1,17 +1,31 @@
-%ul.accordion-tabs-minimal
-  %li.tab-header-and-content
-    = link_to 'Your Contribs', '#', class: 'tab-link'
-    .tab-content
-      = render 'messages/new', stage: resource
-      %hr
-      Your Snippets:
-  %li.tab-header-and-content
-    = link_to 'Complete Performance', '#', class: 'tab-link'
-    .tab-content
-      %pre
-        %code
-          = resource.performance.to_s.gsub(/\n/, '')
+.outer-container
+  %ul.accordion-tabs-minimal.col-8
+    %li.tab-header-and-content
+      = link_to 'Your Contrib', '#', class: 'tab-link'
+      .tab-content
+        = render 'messages/new', stage: resource
+    %li.tab-header-and-content
+      = link_to 'Complete Performance', '#', class: 'tab-link'
+      .tab-content
+        %pre
+          %code
+            = resource.performance.to_s.gsub(/\n/, '')
 
-  %li.tab-header-and-content
-    = link_to 'Band mates', '#', class: 'tab-link'
-    .tab-content
+    %li.tab-header-and-content
+      = link_to 'Band mates', class: 'tab-link' do
+        Band mates
+      .tab-content
+        Foo
+    %li.tab-header-and-content
+      = link_to 'Π control', class: 'tab-link' do
+        Π control
+      .tab-content
+  .log.col-4
+    = render 'messages/messages', stage: resource
+
+:javascript
+  $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });

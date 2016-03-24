@@ -1,7 +1,13 @@
 = form_for [stage, Message.new], remote: true, html: { onsubmit: 'setContent();' } do |form|
   #editor
   = form.text_area :content
-  = form.submit 'Add snippet', class: 'btn'
+  = form.submit 'Update my contribution', class: 'btn col-4'
+  %button.btn.col-4
+    Reset
+  %button.btn.col-4
+    Add sample
+
+
 
 :javascript
   var textarea = jQuery('textarea[id="message_content"]');

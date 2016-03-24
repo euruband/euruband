@@ -1,2 +1,2 @@
 %section{id: "messages", data:{channel: "messages", stage:{id: "#{stage.id}"}}}
-  = render stage.messages
+  = render stage.messages.take(5)
