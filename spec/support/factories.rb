@@ -14,4 +14,10 @@ FactoryGirl.define do
     user
   end
 
+  factory :contribution do
+    content 'Pi is equal 3'
+    user
+    stage
+  end
+
 end

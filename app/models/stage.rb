@@ -19,7 +19,7 @@ class Stage < ActiveRecord::Base
   #
 
   def performance
-    messages.pluck(:content).join("\n")
+    contributions.pluck(:content).join("\n")
   end
 
 end
