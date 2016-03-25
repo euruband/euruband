@@ -1,105 +1,11 @@
-.stage {  
-  $base-border-radius: 3px !default;
-  $base-border-thickness: 0px;
-  $base-accent-color: #477DCA !default;
-  $large-screen: em(860) !default;
-  $stage-color: $dark-gray;
-
-  #bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 6%;
-
-    background-color: tint($purple, 20);
-    
-    h1 {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      padding-left: 5px;
-      font-size: 2em;
-      font-weight: 900;
-      opacity: 0.6;
-      color: $light-mint;
-    }
-    h4 {
-      font-size: 1em;
-      opacity: 0.6;
-    }
-  }
-
-  #actions {
-    background-color: tint($purple, 10);
-    background-shadow: 30px #dcdcdc;
-    button {
-      margin-left: 0;
-      margin-right: 2px;
-    }
-
-    padding-left: 1%;
-    padding-right: 5px;
-    padding-top: 0px;
-    padding-bottom: 5px;
-    position: fixed;
-    top: 6%;
-    left: 0;
-    width: 100%;
-
-    border: $base-border-thickness solid $dark-gray;
-    border-radius: $base-border-radius;
-
-    height: 7%;
-  }
-
-  #editor {
-    margin-left: 0;
-    margin-right: 1%;
-    margin-top: 0;
-    margin-bottom: 1%;
-    position: fixed;
-    top: 13%;
-    left: 0;
-    width: 38%;
-    height: 77%;
-    border: $base-border-thickness solid $dark-gray;
-    border-radius: $base-border-radius;
-    text-align: left;
-  }
-
-  #submitter { 
-    position: fixed;
-    top: 89%;
-    left: 0;
-    width: 38%;
-    height: 8%;
-    
-    border: $base-border-thickness solid $dark-gray;
-    border-radius: 0;
-
-    text-align: left;
-  }
-
-  #messages {
-    pre {
-      padding-top: 0;
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 1px;
-      margin: 0;
-      border-radius: $base-border-radius;
-    }
-    padding: 0;
-
-    position: fixed;
-    top: 13%;
-    left: 38%;
-    width: 62%;
-    height: 84%;
-    overflow: scroll;
-    right: 0;
-  
-    border: 2px solid tint($purple, 50);
-    border-radius: 0;
-  }
+.log {
+  border-left: 1px solid #ddd;
+  height: 650px;
+  margin-top: 5px;
+  padding-left: 10px;
 }
+
+.tab-link.is-active { 
+  color: #4CAF50 !important;
+}
+

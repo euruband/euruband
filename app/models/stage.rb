@@ -12,13 +12,14 @@ class Stage < ActiveRecord::Base
 
   belongs_to :user
   has_many :messages
+  has_many :contributions
 
   # instance methods
   #
   #
 
   def performance
-    messages.pluck(:content).join("\n")
+    contributions.pluck(:content).join("\n")
   end
 
 end

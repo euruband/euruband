@@ -4,5 +4,6 @@ RSpec.describe User do
 
   it { is_expected.to have_many(:stages) }
   it { is_expected.to have_many(:messages) }
+  it { is_expected.to have_many(:contributions) }
 
 end

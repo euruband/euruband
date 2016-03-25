@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create! permitted_params
+    @message.contribution.update_column :content, @message.content
     pi.run(current_stage.performance)
   end
 

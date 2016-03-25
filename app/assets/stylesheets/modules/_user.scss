@@ -1,0 +1,20 @@
+#user {
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding: 10px
+}
+
+.avatar {
+  img {
+    width: 30px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    float: left;
+  }
+  #name {
+    font-size: 12px;
+    font-weight: 900;
+    color: #E91E63;
+    vertical-align: center;
+  }
+}

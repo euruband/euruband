@@ -23,6 +23,10 @@ class Message < ActiveRecord::Base
   #
   #
 
+  def contribution
+    Contribution.find_by(user: user, stage: stage).presence || user.contributions.create(stage: stage, content: content)
+  end
+
   private
 
   def broadcast

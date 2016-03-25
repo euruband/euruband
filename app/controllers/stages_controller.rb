@@ -26,6 +26,7 @@ class StagesController < ApplicationController
   def reset
     pi.stop
     resource.messages.destroy_all
+    resource.contributions.destroy_all
     redirect_to resource
   end
 

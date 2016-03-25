@@ -1,17 +1,31 @@
-.stage
-  #bar
-    %h1= resource.title
-  #actions
-    = link_to reload_stage_path(resource) do
-      %i{ class: 'material-icons md-48' }
-        play_circle_outline
+.outer-container
+  %ul.accordion-tabs-minimal.col-8
+    %li.tab-header-and-content
+      = link_to 'Your Contrib', '#', class: 'tab-link'
+      .tab-content
+        = render 'messages/new', stage: resource
+    %li.tab-header-and-content
+      = link_to 'Complete Performance', '#', class: 'tab-link'
+      .tab-content
+        %pre
+          %code
+            = resource.performance.to_s.gsub(/\n/, '')
 
-    = link_to stop_stage_path(resource) do
-      %i{ class: 'material-icons md-48' }
-        pause_circle_outline
+    %li.tab-header-and-content
+      = link_to 'Band mates', class: 'tab-link' do
+        Band mates
+      .tab-content
+        Foo
+    %li.tab-header-and-content
+      = link_to 'Π control', class: 'tab-link' do
+        Π control
+      .tab-content
+  .log.col-4
+    = render 'messages/messages', stage: resource
 
-    = link_to reset_stage_path(resource), method: :put do
-      %i{ class: 'material-icons md-48' }
-        highlight_off
-
-  = render 'messages/messages', stage: resource
+:javascript
+  $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
