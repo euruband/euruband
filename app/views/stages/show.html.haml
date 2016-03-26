@@ -16,11 +16,21 @@
         Band mates
       .tab-content
         Foo
-    %li.tab-header-and-content
-      = link_to 'Π control', class: 'tab-link' do
-        Π control
-      .tab-content
+
   .log.col-4
+    = link_to reload_stage_path do
+      %i{ class: 'material-icons play' }
+        play_arrow
+    = link_to stop_stage_path do
+      %i{ class: 'material-icons stop' }
+        stop
+    = link_to reset_stage_path, method: :put do
+      %i{ class: 'material-icons reset' }
+        cached
+    = link_to root_path do
+      %i{ class: 'material-icons' }
+        home
+
     = render 'messages/messages', stage: resource
 
 :javascript
