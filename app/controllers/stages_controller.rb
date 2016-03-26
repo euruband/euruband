@@ -14,13 +14,21 @@ class StagesController < ApplicationController
   end
 
   def reload
-    pi.run(resource.performance)
-    render :show
+    respond_to do |format|
+      format.js do
+        pi.run(resource.performance)
+        render status: 200, nothing: true
+      end
+    end
   end
 
   def stop
-    pi.stop
-    render :show
+    respond_to do |format|
+      format.js do
+        pi.stop
+        render status: 200, nothing: true
+      end
+    end
   end
 
   def reset

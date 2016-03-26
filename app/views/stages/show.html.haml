@@ -21,10 +21,10 @@
               %h4= user.name
 
   .log.col-4
-    = link_to reload_stage_path do
+    = link_to reload_stage_path, remote: true do
       %i{ class: 'material-icons play' }
         play_arrow
-    = link_to stop_stage_path do
+    = link_to stop_stage_path, remote: true do
       %i{ class: 'material-icons stop' }
         stop
     = link_to reset_stage_path, method: :put do
