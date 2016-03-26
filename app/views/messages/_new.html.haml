@@ -1,6 +1,6 @@
 = form_for [stage, Message.new], remote: true, html: { onsubmit: 'setContent();' } do |form|
   #editor
-  = form.text_area :content
+  = form.text_area :content, value: current_contribution.content
   = form.submit 'Update my contribution', class: 'btn col-4'
   %button.btn.col-4
     Reset

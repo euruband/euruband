@@ -3,7 +3,7 @@ require 'sonic_pi'
 class StagesController < ApplicationController
 
   before_action :find_resource, only: [:show, :reset, :reload, :stop]
-  helper_method :resource
+  helper_method :resource, :current_contribution
 
   def index
     @stages = Stage.all
@@ -34,6 +34,10 @@ class StagesController < ApplicationController
 
   def find_resource
     @stage = Stage.find(params[:id])
+  end
+
+  def current_contribution
+    @current_contribution ||= Contribution.find_by(stage: resource, user: @current_user)
   end
 
   def resource
