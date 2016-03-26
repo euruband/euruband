@@ -3,9 +3,7 @@
   = form.text_area :content, value: current_contribution.content
   = form.submit 'Update my contribution', class: 'btn col-4'
   %button.btn.col-4
-    Reset
-  %button.btn.col-4
-    Add sample
+    Choose from preset
 
 :javascript
   var textarea = jQuery('textarea[id="message_content"]');

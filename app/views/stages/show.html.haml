@@ -15,7 +15,10 @@
       = link_to 'Band mates', class: 'tab-link' do
         Band mates
       .tab-content
-        Foo
+        %ul
+          - resource.contributions.map(&:user).each do |user|
+            %li
+              %h4= user.name
 
   .log.col-4
     = link_to reload_stage_path do
@@ -26,12 +29,12 @@
         stop
     = link_to reset_stage_path, method: :put do
       %i{ class: 'material-icons reset' }
-        cached
+        refresh
     = link_to root_path do
       %i{ class: 'material-icons' }
         home
-
-    = render 'messages/messages', stage: resource
+    .messages
+      = render 'messages/messages', stage: resource
 
 :javascript
   $(document).ready(function() {
