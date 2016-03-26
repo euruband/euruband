@@ -1,20 +1,26 @@
 #user {
   border: 1px solid #ccc;
   margin-bottom: 5px;
-  padding: 10px
-}
+  height: 75px;
+  width: 215px;
 
-.avatar {
-  img {
-    width: 30px;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    float: left;
-  }
-  #name {
-    font-size: 12px;
-    font-weight: 900;
-    color: #E91E63;
-    vertical-align: center;
+  line-height: 12px;
+
+  .avatar {
+    img {
+      width: 50px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      float: left;
+      margin: 5px;
+    }
+    #name {
+      padding-top: 8px;
+      width: 170px;
+      font-size: 14px;
+      font-weight: 900;
+      color: #E91E63 !important;
+      vertical-align: center;
+    }
   }
 }

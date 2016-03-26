@@ -1,5 +1,11 @@
 class Message < ActiveRecord::Base
 
+  NOTIFICATIONS = [
+    'raises his/her fists to the air!',
+    'shakes her/his hair!',
+    'brought in a new tune!',
+  ]
+
   # validations
   #
   #

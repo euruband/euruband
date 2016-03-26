@@ -2,6 +2,8 @@
   #user
     .avatar
       = image_tag 'loudly_icon.png'
-      #name= message.user.name.to_s
-    %p
-      updated her/his contrib. Rock on!
+      #name
+        = message.user.name.to_s
+      %p
+        %small
+          = Message::NOTIFICATIONS.sample
