@@ -37,7 +37,7 @@ class StagesController < ApplicationController
   end
 
   def current_contribution
-    @current_contribution ||= Contribution.find_by(stage: resource, user: @current_user)
+    @current_contribution ||= Contribution.find_or_create_by(stage: resource, user: @current_user)
   end
 
   def resource
